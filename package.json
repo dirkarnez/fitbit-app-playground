@@ -1,0 +1,33 @@
+{
+  "name": "todolist",
+  "version": "1.1.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@fitbit/sdk": "~4.1.0",
+    "@fitbit/sdk-cli": "^1.7.1"
+  },
+  "fitbit": {
+    "appUUID": "6f99b4c4-3861-4df2-ab82-dffc655afb42",
+    "appType": "app",
+    "appDisplayName": "To Do List",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#2196f3",
+    "requestedPermissions": [],
+    "buildTargets": [
+      "meson",
+      "higgs",
+      "gemini",
+      "mira"
+    ],
+    "i18n": {
+      "en": {
+        "name": "To Do List"
+      }
+    }
+  },
+  "scripts": {
+    "build": "fitbit-build",
+    "debug": "fitbit"
+  }
+}
