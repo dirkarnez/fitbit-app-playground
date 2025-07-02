@@ -11,8 +11,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 16
-
-      - run: apt-get install libsecret-1-dev
+ # [Fitbit SDK CLI Example Build/ Install Fitbit OS Apps.](https://gist.github.com/princessleia1/2a0b2d9f5f8438a4ee0050d16d86ab0a)
+      - run: sudo apt-get install libsecret-1-dev
       
       - run: npm install
       
