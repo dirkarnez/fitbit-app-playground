@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 16
- # [Fitbit SDK CLI Example Build/ Install Fitbit OS Apps.](https://gist.github.com/princessleia1/2a0b2d9f5f8438a4ee0050d16d86ab0a)
+          
       - run: sudo apt-get install libsecret-1-dev
       
       - run: npm install
@@ -19,3 +19,17 @@ jobs:
       - run: npm run-script build
       
       - run: ls
+
+      - name: Archive Release
+        uses: thedoctor0/zip-release@master
+        with:
+          type: 'zip'
+          path: "build/app.fba"
+          filename: "${{ github.event.repository.name }}-${{ github.ref_name }}.zip"
+          
+      - name: Release prebuilt
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "${{ github.event.repository.name }}-${{ github.ref_name }}.zip"
+          allowUpdates: true
+          token: ${{ secrets.GITHUB_TOKEN }}
