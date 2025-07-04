@@ -1,0 +1,17 @@
+{
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": null,
+        "Windows PowerShell": null,
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "env": {
+                "PATH_1": "D:\\Softwares\\PortableGit\\bin;${env:USERPROFILE}\\Downloads\\node-v22.14.0-win-x64\\node-v22.14.0-win-x64;D:\\Softwares\\node-v22.14.0-win-x64\\node-v22.14.0-win-x64",
+                "PATH": "${env:USERPROFILE}\\Downloads\\PortableGit\\bin;${env:USERPROFILE}\\Downloads\\node-v16.20.2-win-x64\\node-v16.20.2-win-x64;${env:USERPROFILE}\\Downloads\\python-3.10.8-amd64-portable;${env:USERPROFILE}\\Downloads\\python-3.10.8-amd64-portable\\Scripts",
+                "PYTHON": "${env:USERPROFILE}\\Downloads\\python-3.10.8-amd64-portable"
+            }
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Command Prompt"
+}
