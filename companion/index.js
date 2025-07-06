@@ -12,7 +12,7 @@
 */
 
 import { settingsStorage } from "settings";
-import { outbox } from "file-transfer";
+// import { outbox } from "file-transfer";
 import * as cbor from 'cbor';
 
 settingsStorage.onchange = function (evt) {
@@ -34,9 +34,9 @@ function sendTodoItems() {
                 "todo": JSON.parse(todoItems),
                 "colorSchemeName": colorSchemeName
             };
-            outbox.enqueue('todoItems.cbor', cbor.encode(todoItems))
-                .then(ft => { /* console.log('todos sent'); */ })
-                .catch(error => { /* console.log("Error sending todos: " + error); */ });
+            // outbox.enqueue('todoItems.cbor', cbor.encode(todoItems))
+            //     .then(ft => { /* console.log('todos sent'); */ })
+            //     .catch(error => { /* console.log("Error sending todos: " + error); */ });
         } catch (e) {
             // console.log("error parsing setting value: " + e);
         }

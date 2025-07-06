@@ -13,7 +13,7 @@
 
 import document from "document";
 import * as fs from "fs";
-import { me as device } from "device";
+// import { me as device } from "device";
 import { battery } from "power";
 import { inbox } from "file-transfer";
 import * as cbor from "cbor";
@@ -27,9 +27,9 @@ let batteryPercent = document.getElementById("battery");
 let batteryOverlay = document.getElementById("batteryIconOverlay");
 let batteryRedLine = document.getElementById("batteryRedLine");
 
-const IONIC = "IONIC";
+const VERSA = "VERSA";
 
-if (device.modelName.toUpperCase() === IONIC) {
+// if (device.modelName.toUpperCase() === VERSA) {
     timeOfDay.y = 20;
     appTitle.y = 20;
     batteryPercent.y = 20;
@@ -38,7 +38,7 @@ if (device.modelName.toUpperCase() === IONIC) {
     batteryOverlay.height = 12;
     batteryRedLine.y = 8;
     batteryRedLine.height = 12;
-}
+//}
 
 function updateHeader() {
     let batteryLevel = battery.chargeLevel;
@@ -288,5 +288,5 @@ function processInbox() {
     }
 }
 
-inbox.onnewfile = processInbox;
-processInbox();
+// inbox.onnewfile = processInbox;
+// processInbox();
