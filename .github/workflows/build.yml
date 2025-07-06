@@ -1,7 +1,10 @@
 name: Node.js Build
 on:
   push:
-
+  
+permissions:
+    contents: write
+    
 jobs:
   build:
     runs-on: ubuntu-latest
